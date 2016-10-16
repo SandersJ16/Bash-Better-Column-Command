@@ -9,11 +9,11 @@ Right now only 3 options are available
 -x will print rows first (default is columns first)
 -e will ignore empty lines
 
-To install simply download the ccolumn.bash. I run it as an alias with ccolumn which can be done by typeing the following in your ~/.bash_aliases file:
+To install simply download the ccolumn.bash. I run it as an alias with ccolumn which can be done by typing the following in your ~/.bash_aliases file:
 
 alias ccolumn='/file/path/ccolumn.bash' (where /file/path is obviously the path to where you downloaded the file)
 
-Or alternatively you can make it make a terminal command by doing the following:
+Or alternatively you can make it make a terminal command by adding it to your path:
 
 cp ccolumn.bash ccolumn (You can change ccolumn to whatever you want the command name to be)
 chmod +x ccolumn
