@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 screen_width=`tput cols` #current width of terminal	
 original_IFS=IFS #Record original IFS value
@@ -76,7 +76,7 @@ setOptions()
 setColorArrays()
 {
 	#Assign input to arrays
-	while read -t 0.1 file; do #Read Times out after 0.1 seconds if no input
+	while read -t 1 file; do #Read Times out after 1 second if no input
 		colored=("${colored[@]}" "$file")
 		
 		local color_removed=$(removeColor "$file")
@@ -87,7 +87,7 @@ setColorArrays()
 
 removeColor()
 {
-	echo "$1" | sed -r 's/\[[^mK]*(m|K)//g' #Removes All linux Color Codes from String
+	echo "$1" | sed -E 's/\[[^mK]*(m|K)//g' #Removes All linux Color Codes from String
 }
 
 setRowSizesToZero()
