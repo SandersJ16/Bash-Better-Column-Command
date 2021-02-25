@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env -S -i TERM=${TERM} bash
 
 screen_width=`tput cols` #current width of terminal	
 original_IFS=IFS #Record original IFS value
